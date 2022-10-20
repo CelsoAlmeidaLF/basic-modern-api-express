@@ -46,7 +46,7 @@
     "dev": "nodemon ./bin",
     "start": "node ./bin"
   },
-  "author": "Systekna <celso.almeida.leite@hotmail.com>",
+  "author": "Almeida <https://github.com/CelsoAlmeidaLF>",
   "license": "ISC",
   "description": ""
 }
