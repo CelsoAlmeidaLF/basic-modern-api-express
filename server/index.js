@@ -1,24 +1,26 @@
-const express = require('express')
+import express from 'express'
+import body from 'body-parser'
+import {router} from './routers/router.js'
+
 const app = express()
-const router = require('./router')
-const body = require('body-parser')
 const port = process.env.port || 3000
 
-exports.ServerHttp = class ServerHttp {
+export default class ServerHttp {
 
     middleware(){
         app.use(body.json());
-        this.router();
     }
 
-    router(){
-        app.use('/api', router);
+    routers(){
+        app.use('/api/v1', router);
         app.get('/', (req, res) => res.redirect("/api"));
     }
 
     createServer(){
         this.middleware();
+        this.routers();
+
         console.log('server rodando ...');
-        app.listen(port, () => console.log(`rodando: http://localhost:${port}/api`));
+        app.listen(port, () => console.log(`rodando: http://localhost:${port}/api/v1`));
     }
 }

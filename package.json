@@ -48,5 +48,6 @@
   },
   "author": "Almeida <https://github.com/CelsoAlmeidaLF>",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "type": "module"
 }

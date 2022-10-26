@@ -1,15 +1,15 @@
+import ServerHttp from '../server/index.js';
+import Application from  './application.js';
 
-// Server Layer
-const { ServerHttp } = require('../server')
-
-// Init Program
-class Program {
+class Program extends Application {
 
     constructor(){
-        console.log("config ...");
-        this.server = new ServerHttp();
-        this.server.createServer();
+        super();
+        let server = new ServerHttp();
+        server.createServer();
     }
+
+
 
 }
 
