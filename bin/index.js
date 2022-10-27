@@ -8,9 +8,6 @@ class Program extends Application {
         let server = new ServerHttp();
         server.createServer();
     }
-
-
-
 }
 
 // Inicialização do Program
